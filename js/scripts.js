@@ -28,22 +28,10 @@ const stringNumber2 = number2.toString();
 
 
 window.alert( 
-(stringNumber1) + (" + ") + 
-(stringNumber2) + (" = ") + 
-add(number1, number2) + 
-(", ") + 
-(stringNumber1) + (" - ") + 
-(stringNumber2) + (" = ") +
-subtract(number1,number2) + 
-(", ") +
-(stringNumber1) + (" / ") + 
-(stringNumber2) + (" = ") +
-divide(number1, number2) + 
-(", ") +
-(stringNumber1) + (" x ") + 
-(stringNumber2) + (" = ") +
-multiply(number1, number2) +
-(".")
+(stringNumber1) + (" + ") + (stringNumber2) + (" = ") + add(number1, number2) + (", ") + 
+(stringNumber1) + (" - ") + (stringNumber2) + (" = ") + subtract(number1,number2) + (", ") +
+(stringNumber1) + (" / ") + (stringNumber2) + (" = ") + divide(number1, number2) + (", ") +
+(stringNumber1) + (" x ") + (stringNumber2) + (" = ") + multiply(number1, number2) +(".")
 );
 
 
