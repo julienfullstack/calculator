@@ -10,10 +10,6 @@
 
 ## Technologies Used
 
-
-sdfdsfsdfsdds
-asdsafsdafsdsdfasdfdasfsdafdasfds
-
 * _HTML_
 * _CSS_
 * _Git_
