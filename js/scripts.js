@@ -1,37 +1,42 @@
-//business logic
-function add(number1, number2) {
-  return number1 + number2;
+// Business Logic
+function add(num1, num2) {
+  return num1 + num2;
 }
 
-function subtract(number1, number2) {
-  return number1 - number2;
+function subtract(num1, num2) {
+  return num1 - num2;
 }
 
-function divide(number1, number2) {
-  return number1 / number2;
+function multiply(num1, num2) {
+  return num1 * num2;
 }
 
-function multiply(number1, number2) {
-  return number1 * number2;
+function divide(num1, num2) {
+  return num1 / num2;
 }
 
+// User Interface Logic
+function handleCalculation(event) {
+  event.preventDefault();
+  const number1 = parseInt(document.querySelector("input#input1").value);
+  const number2 = parseInt(document.querySelector("input#input2").value);
+  const operator = document.querySelector("input[name='operator']:checked").value;
 
-//user interface logic
+  let result;
+  if (operator === "add") {
+    result = add(number1, number2);
+  } else if (operator === "subtract") {
+    result = subtract(number1, number2);
+  } else if (operator === "multiply") {
+    result = multiply(number1, number2);
+  } else if (operator === "divide") {
+    result = divide(number1, number2);
+  }
 
-// user interface logic 
-const number1 = parseInt(prompt("Enter a number:"));
-const number2 = parseInt(prompt("Enter another number:"));
-const stringNumber1 = number1.toString();
-const stringNumber2 = number2.toString();
+  document.getElementById("output").innerText = result;
+}
 
-
-
-
-window.alert( 
-(stringNumber1) + (" + ") + (stringNumber2) + (" = ") + add(number1, number2) + (", ") + 
-(stringNumber1) + (" - ") + (stringNumber2) + (" = ") + subtract(number1,number2) + (", ") +
-(stringNumber1) + (" / ") + (stringNumber2) + (" = ") + divide(number1, number2) + (", ") +
-(stringNumber1) + (" x ") + (stringNumber2) + (" = ") + multiply(number1, number2) +(".")
-);
-
-
+window.addEventListener("load", function() {
+  const form = document.getElementById("calculator");
+  form.addEventListener("submit", handleCalculation);
+});
